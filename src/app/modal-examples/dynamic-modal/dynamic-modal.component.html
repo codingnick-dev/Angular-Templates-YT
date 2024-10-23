@@ -1,0 +1,5 @@
+<dialog #dynamicModal>
+  <h2><ng-content select="[modalTitle]"></ng-content></h2>
+  <div><ng-content select="[modalContent]"></ng-content></div>
+  <button (click)="closeModal()">Close</button>
+</dialog>

@@ -1,0 +1,32 @@
+<h1>Modal Examples</h1>
+
+<div class="button-container">
+  <!-- Basic Modal -->
+  <button (click)="openBasicModal()">Open Basic Modal</button>
+
+  <!-- Dynamic Modal -->
+  <button (click)="openDynamicModal()">Open Dynamic Modal</button>
+
+  <!-- Form Modal -->
+  <button (click)="openFormModal()">Open Form Modal</button>
+</div>
+
+<!-- Basic Modal -->
+<dialog #basicModal>
+  <h2>Basic Modal</h2>
+  <p>This is a basic modal using the HTML dialog element.</p>
+  <button (click)="closeModal(basicModal)">Close</button>
+</dialog>
+
+<!-- Dynamic Modal -->
+<app-dynamic-modal #dynamicModal>
+  <ng-container modalTitle>Dynamic Modal</ng-container>
+  <ng-container modalContent>
+    <p>{{ dynamicContent }}</p>
+  </ng-container>
+</app-dynamic-modal>
+
+<!-- Form Modal -->
+<app-form-modal #formModal
+  (modalClosed)="onFormModalClosed($event)">
+</app-form-modal>
