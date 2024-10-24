@@ -1,0 +1,17 @@
+<h1>Native Lazy Loading Example for Images and Iframes</h1>
+
+<h2>Lazy Loading Images</h2>
+<div class="image-gallery">
+  <div *ngFor="let image of images">
+    <img [loading]="isLazyLoading ? 'lazy' : 'eager'" [src]="image.src" [alt]="image.alt" width="500" height="500">
+  </div>
+</div>
+
+<!--<app-responsive-images></app-responsive-images>-->
+
+<h2>Lazy Loading Iframes</h2>
+<div class="iframe-container">
+  <div *ngFor="let iframe of iframes">
+    <iframe [loading]="isLazyLoading ? 'lazy' : 'eager'" [src]="iframe.src | safe" [title]="iframe.title"  allowfullscreen></iframe>
+  </div>
+</div>

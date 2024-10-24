@@ -1,0 +1,10 @@
+<h2>Responsive Images with srcset</h2>
+<div class="responsive-image-gallery">
+  <div *ngFor="let image of images">
+    <img [src]="image.src" 
+         [srcset]="image.srcset" 
+         [sizes]="image.sizes" 
+         [alt]="image.alt" 
+         loading="lazy">
+  </div>
+</div>
