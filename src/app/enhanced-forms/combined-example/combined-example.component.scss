@@ -1,0 +1,13 @@
+@import '../shared-styles.scss';
+
+.form-container {
+  background-color: #f0f4c3;
+}
+
+button {
+  background-color: #4caf50;
+
+  &:hover {
+    background-color: #45a049;
+  }
+}
