@@ -1,0 +1,9 @@
+<h2>Advanced Business Cards with Container Queries</h2>
+<div class="card-grid">
+  <div *ngFor="let info of businessInfos" 
+       class="card-container"
+       [style.grid-column]="'span ' + info.gridSpan.column"
+       [style.grid-row]="'span ' + info.gridSpan.row">
+    <app-business-card [businessInfo]="info"></app-business-card>
+  </div>
+</div>

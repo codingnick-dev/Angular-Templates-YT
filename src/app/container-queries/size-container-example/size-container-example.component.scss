@@ -1,0 +1,78 @@
+.resizable-container {
+  container-type: size;
+  resize: both;
+  overflow: auto;
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  h3, p {
+    flex: 1 1 100%;
+    margin: 0;
+  }
+
+  .image-placeholder {
+    background-color: #ddd;
+    flex: 1 1 100%;
+    height: 80px;
+  }
+
+  .additional-content {
+    flex: 1 1 100%;
+
+    h4 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+  }
+}
+
+@container (min-width: 400px) and (min-height: 300px) {
+  .content {
+    .image-placeholder {
+      flex: 0 0 calc(50% - 5px);
+      height: 120px;
+    }
+
+    .additional-content {
+      flex: 0 0 calc(50% - 5px);
+    }
+  }
+}
+
+@container (min-width: 600px) and (min-height: 400px) {
+  .content {
+    font-size: 16px;
+
+    .image-placeholder {
+      flex: 0 0 calc(33.33% - 7px);
+      height: 150px;
+    }
+
+    .additional-content {
+      flex: 0 0 calc(66.66% - 3px);
+    }
+  }
+}
+
+@container (max-width: 399px) or (max-height: 299px) {
+  .content {
+    font-size: 14px;
+
+    .image-placeholder {
+      height: 60px;
+    }
+  }
+}

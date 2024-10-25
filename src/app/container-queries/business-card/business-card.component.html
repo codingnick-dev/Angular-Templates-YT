@@ -1,0 +1,20 @@
+<div class="business-card">
+  <div class="logo-section" [attr.data-year]="businessInfo.establishedYear">
+    <img [src]="businessInfo.logo" [alt]="businessInfo.name + ' logo'">
+  </div>
+  <div class="info-section">
+    <h3>{{ businessInfo.name }}</h3>
+    <p class="description">{{ businessInfo.description }}</p>
+    <div class="stats">
+      <div *ngFor="let stat of businessInfo.stats" class="stat-item">
+        <span class="stat-value">{{ stat.value }}</span>
+        <span class="stat-label">{{ stat.label }}</span>
+      </div>
+    </div>
+    <div class="contact-info">
+      <p><strong>Email:</strong> {{ businessInfo.contact.email }}</p>
+      <p><strong>Phone:</strong> {{ businessInfo.contact.phone }}</p>
+      <p><strong>Address:</strong> {{ businessInfo.contact.address }}</p>
+    </div>
+  </div>
+</div>

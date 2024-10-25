@@ -1,0 +1,20 @@
+.container {
+  container-type: inline-size;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  resize: horizontal;
+  overflow: auto;
+}
+
+.item {
+  background-color: #d0d0d0;
+  padding: 10px;
+  font-size: 4cqw;
+}
+
+@container (min-width: 400px) {
+  .item {
+    font-size: 2cqw;
+  }
+}

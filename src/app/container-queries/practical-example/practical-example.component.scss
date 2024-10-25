@@ -1,0 +1,51 @@
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+.sidebar, .main-content {
+  container-type: inline-size;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  width: 30%;
+}
+
+.main-content {
+  width: 70%;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@container (min-width: 300px) {
+  .card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@container (max-width: 299px) {
+  .card {
+    text-align: center;
+  }
+
+  .card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+}

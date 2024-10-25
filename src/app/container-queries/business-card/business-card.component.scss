@@ -1,0 +1,183 @@
+.business-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.logo-section {
+  background-color: #007bff;
+  padding: 20px;
+  text-align: center;
+
+  img {
+    max-width: 100px;
+    border-radius: 50%;
+  }
+}
+
+.info-section {
+  padding: 20px;
+
+  h3 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .description {
+    font-style: italic;
+    color: #666;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+
+  .stat-item {
+    text-align: center;
+
+    .stat-value {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .stat-label {
+      font-size: 0.8em;
+      color: #666;
+    }
+  }
+}
+
+.contact-info {
+  font-size: 0.9em;
+  color: #333;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+// First level: Vertical layout
+@container (max-width: 449px) {
+  .business-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-section {
+    padding: 10px;
+
+    img {
+      max-width: 80px;
+    }
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+
+    .stat-item {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contact-info {
+    font-size: 0.8em;
+  }
+}
+
+// Second level: Side-by-side layout
+@container (min-width: 450px) and (max-width: 699px) {
+  .business-card {
+    display: flex;
+  }
+
+  .logo-section {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 120px;
+    }
+  }
+
+  .info-section {
+    flex: 1;
+  }
+
+  .stats {
+    flex-wrap: wrap;
+
+    .stat-item {
+      flex: 0 0 50%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// Third level: Enhanced layout with more details
+@container (min-width: 700px) {
+  .business-card {
+    display: flex;
+  }
+
+  .logo-section {
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+
+    &::after {
+      content: 'Est. ' attr(data-year);
+      color: white;
+      font-size: 0.9em;
+    }
+  }
+
+  .info-section {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    flex: 0 0 100%;
+  }
+
+  .description {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
+  .stats {
+    flex: 0 0 40%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .stat-value {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .contact-info {
+    flex: 0 0 55%;
+  }
+}
