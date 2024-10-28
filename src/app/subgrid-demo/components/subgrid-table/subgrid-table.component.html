@@ -1,0 +1,10 @@
+<div class="table-container">
+  <div class="table-grid">
+    <div class="header-row">
+      <div class="cell">ID</div>
+      <div class="cell">Name</div>
+      <div class="cell">Details</div>
+    </div>
+    <app-table-row *ngFor="let row of data" [row]="row"></app-table-row>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.table-container {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: auto 1fr 2fr;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.header-row {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.cell {
+  padding: 8px;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}

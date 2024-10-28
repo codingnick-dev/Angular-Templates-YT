@@ -5,9 +5,6 @@ import { EnhancedFormsComponent } from './enhanced-forms/enhanced-forms.componen
 import { ContainerQueriesComponent } from './container-queries/container-queries.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/modal-examples', pathMatch: 'full' },
-  { path: 'modal-examples', component: ModalExamplesComponent },
-  { path: 'lazy-loading-example', component: LazyLoadingExampleComponent },
-  { path: 'enhanced-forms', component: EnhancedFormsComponent },
-  { path: 'container-queries', component: ContainerQueriesComponent }
+  { path: '', redirectTo: '/subgrid-demo', pathMatch: 'full' },
+  { path: 'subgrid-demo', loadComponent: () => import('./subgrid-demo/subgrid-demo.component').then(m => m.SubgridDemoComponent) }
 ];

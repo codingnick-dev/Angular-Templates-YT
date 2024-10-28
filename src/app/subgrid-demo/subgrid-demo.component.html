@@ -1,0 +1,58 @@
+<div class="demo-container">
+  <h2>Subgrid Examples</h2>
+  
+  <section>
+    <h3>1. Table with Subgrid Rows</h3>
+    <app-subgrid-table [data]="tableData"></app-subgrid-table>
+  </section>
+
+  <section>
+    <h3>2. Card Grid with Subgrid Layout</h3>
+    <app-card-grid></app-card-grid>
+  </section>
+
+  <section>
+    <h3>3. Dashboard Layout with Dynamic Spans</h3>
+    <div class="dashboard-grid">
+      <div class="dashboard-item weather">
+        <h4>Weather Forecast</h4>
+        <div class="weather-content">
+          <div>Mon 🌤️</div>
+          <div>Tue ⛅</div>
+          <div>Wed 🌞</div>
+        </div>
+      </div>
+
+      <div class="dashboard-item stats">
+        <h4>Statistics</h4>
+        <div class="stats-content">
+          <div>Users</div>
+          <div>1,234</div>
+          <div>Views</div>
+          <div>5,678</div>
+          <div>Sales</div>
+          <div>910</div>
+        </div>
+      </div>
+
+      <!-- News widget spans 2 columns and 2 rows -->
+      <div class="dashboard-item news">
+        <h4>Latest News</h4>
+        <div class="news-content">
+          <div class="news-item">
+            <span class="date">Today</span>
+            <p>Breaking: Subgrid Support Increases!</p>
+          </div>
+          <div class="news-item">
+            <span class="date">Yesterday</span>
+            <p>CSS Grid Revolution Continues</p>
+          </div>
+          <div class="news-item">
+            <span class="date">2 days ago</span>
+            <p>Developers Love New Layout Options</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
