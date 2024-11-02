@@ -1,0 +1,12 @@
+<div class="infinite-scroll-demo">
+  <div class="posts-container">
+    <article class="post" *ngFor="let post of posts">
+      <h3>{{post.title}}</h3>
+      <p>{{post.content}}</p>
+    </article>
+    
+    <div #sentinel class="sentinel">
+      <div class="loading-spinner" *ngIf="loading">Loading more posts...</div>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,30 @@
+<div class="lazy-loading-demo">
+  <div class="image-grid">
+    <div class="image-card" 
+         *ngFor="let image of images" 
+         #imageContainer
+         [attr.data-image-id]="image.id">
+      <div class="image-container">
+        <!-- Thumbnail/placeholder image -->
+        <img [src]="image.thumbnailUrl" 
+             [alt]="image.title"
+             class="thumbnail"
+             [class.hidden]="image.loaded">
+             
+        <!-- Full quality image (loads when in view) -->
+        <img [src]="image.fullImageUrl" 
+             [alt]="image.title"
+             class="full-image"
+             [class.loaded]="image.loaded">
+             
+        <div class="loading-indicator" *ngIf="!image.loaded">
+          Loading...
+        </div>
+      </div>
+      <div class="image-info">
+        <h3>{{image.title}}</h3>
+        <p>{{image.description}}</p>
+      </div>
+    </div>
+  </div>
+</div> 

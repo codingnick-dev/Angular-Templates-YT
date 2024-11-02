@@ -1,0 +1,38 @@
+.infinite-scroll-demo {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.posts-container {
+  padding: 20px;
+}
+
+.post {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+
+  p {
+    margin: 0;
+    color: #666;
+  }
+}
+
+.sentinel {
+  padding: 20px;
+  text-align: center;
+}
+
+.loading-spinner {
+  color: #666;
+  font-style: italic;
+} 

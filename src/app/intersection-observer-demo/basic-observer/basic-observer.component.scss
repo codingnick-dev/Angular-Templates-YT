@@ -1,0 +1,42 @@
+.observer-demo {
+  height: 300px;
+  overflow: hidden;
+}
+
+.scroll-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.box {
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+
+  .visibility-status {
+    color: #000;
+    &::after {
+      content: 'Not visible';
+    }
+  }
+
+  &.visible {
+    background-color: #c8e6c9;
+    
+    .visibility-status {
+      color: #2e7d32;
+      &:after {
+        content: 'Visible!';
+      }
+    }
+  }
+}
+
+.visibility-status {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+} 

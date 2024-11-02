@@ -1,0 +1,16 @@
+<div #scrollContainer class="virtual-scroll-container">
+  <div class="scroll-content" [style.height]="getContainerHeight()">
+    <div class="list-item" 
+         *ngFor="let item of visibleItems; trackBy: trackByFn; let i = index"
+         [ngStyle]="getItemStyle(i)">
+      <img [src]="item.image" [alt]="item.title" loading="lazy">
+      <div class="item-content">
+        <h3>{{item.title}}</h3>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom anchor for infinite scroll -->
+  <div #bottomAnchor class="bottom-anchor"></div>
+</div> 
