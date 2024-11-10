@@ -1,0 +1,12 @@
+<div class="flip-container">
+  <div class="card" [@flipState]="cardState" (click)="toggleFlip()">
+    <div class="front">
+      <h3>Click to Flip</h3>
+      <p>Front Content</p>
+    </div>
+    <div class="back">
+      <h3>Back Side</h3>
+      <p>Back Content</p>
+    </div>
+  </div>
+</div> 

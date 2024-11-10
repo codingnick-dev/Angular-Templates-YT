@@ -1,0 +1,42 @@
+.animations-container {
+  padding: 20px;
+  
+  .examples-nav {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    
+    a {
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #333;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background: #f0f0f0;
+      }
+      
+      &.active {
+        background: #007bff;
+        color: white;
+      }
+    }
+  }
+  
+  .content {
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+
+    .route-container {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+    }
+  }
+} 

@@ -1,0 +1,11 @@
+<div class="panels-container">
+  <div class="panel" *ngFor="let panel of panels">
+    <div class="panel-header" (click)="togglePanel(panel)">
+      <h3>{{ panel.title }}</h3>
+      <span class="toggle-icon">{{ panel.isExpanded ? '−' : '+' }}</span>
+    </div>
+    <div class="panel-content" [@expandCollapse]="panel.isExpanded ? 'expanded' : 'collapsed'">
+      <p>{{ panel.content }}</p>
+    </div>
+  </div>
+</div> 

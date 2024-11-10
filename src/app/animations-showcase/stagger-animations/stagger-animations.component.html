@@ -1,0 +1,23 @@
+<div class="stagger-examples">
+  <section class="example-section">
+    <h3>Staggered List Items</h3>
+    <button (click)="toggleList()">Toggle List</button>
+    
+    <div class="list-container" @listAnimation *ngIf="showList">
+      <div class="list-item" *ngFor="let item of listItems">
+        {{ item }}
+      </div>
+    </div>
+  </section>
+
+  <section class="example-section">
+    <h3>Grid Items</h3>
+    <button (click)="toggleGrid()">Toggle Grid</button>
+    
+    <div class="grid-container" @gridAnimation *ngIf="showGrid">
+      <div class="grid-item" *ngFor="let item of gridItems">
+        {{ item }}
+      </div>
+    </div>
+  </section>
+</div> 

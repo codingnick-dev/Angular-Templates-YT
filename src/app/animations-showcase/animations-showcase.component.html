@@ -1,0 +1,15 @@
+<div class="animations-container">
+  <nav class="examples-nav">
+    <a *ngFor="let example of examples"
+       [routerLink]="[example.path]"
+       routerLinkActive="active">
+      {{ example.name }}
+    </a>
+  </nav>
+  
+  <div class="content">
+    <div class="route-container" [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div> 

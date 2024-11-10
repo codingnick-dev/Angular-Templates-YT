@@ -1,0 +1,27 @@
+<div class="slide-examples">
+  <section class="example-section">
+    <h3>Slide Panel</h3>
+    <button (click)="togglePanel()">Toggle Panel</button>
+    
+    <div class="panel-container">
+      <div *ngIf="showSlidePanel" @slideInOut class="slide-panel">
+        <h4>Sliding Panel Content</h4>
+        <p>This panel slides in from the left and out to the left.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="example-section">
+    <h3>Notifications (Slide Up/Down)</h3>
+    <button (click)="addNotification()">Add Notification</button>
+    
+    <div class="notifications-list">
+      <div *ngFor="let notification of notifications; let i = index"
+           @slideUpDown
+           class="notification">
+        {{ notification }}
+        <button class="remove-btn" (click)="removeNotification(i)">×</button>
+      </div>
+    </div>
+  </section>
+</div> 

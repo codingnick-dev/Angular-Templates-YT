@@ -1,0 +1,21 @@
+<div class="list-container">
+  <div class="controls">
+    <button (click)="addItem()">Add Item</button>
+    <button (click)="removeItem()">Remove Item</button>
+    <input 
+      type="text" 
+      placeholder="Search items..."
+      (input)="onSearchChange($event)"
+      [value]="searchTerm"
+    >
+  </div>
+
+  <div class="items-list" 
+       [@filterAnimation]="filteredItems.length"
+       [style.height]="containerHeight">
+    <div class="list-item" 
+         *ngFor="let item of filteredItems; trackBy: trackByFn">
+      {{ item.text }}
+    </div>
+  </div>
+</div> 

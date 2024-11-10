@@ -1,0 +1,30 @@
+.panels-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.panel {
+  margin-bottom: 10px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  &-header {
+    padding: 15px;
+    background: #f8f9fa;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-content {
+    padding: 0 15px;
+    background: white;
+  }
+}
+
+.toggle-icon {
+  font-size: 20px;
+  font-weight: bold;
+} 

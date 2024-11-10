@@ -1,0 +1,23 @@
+<div class="fade-examples">
+  <section class="example-section">
+    <h3>Simple Fade In/Out</h3>
+    <button (click)="toggleElement()">Toggle Element</button>
+    
+    <div *ngIf="showElement" @fadeInOut class="demo-box">
+      <p>This element fades in and out!</p>
+    </div>
+  </section>
+
+  <section class="example-section">
+    <h3>Fade with Transform</h3>
+    <div class="items-list">
+      <div *ngFor="let item of items; let i = index" 
+           @fadeInOutWithTransform 
+           class="item">
+        {{ item }}
+        <button (click)="removeItem(i)">Remove</button>
+      </div>
+    </div>
+    <button (click)="addItem()">Add Item</button>
+  </section>
+</div> 
